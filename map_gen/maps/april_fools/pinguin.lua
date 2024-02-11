@@ -31,6 +31,7 @@ local MGSP = require 'resources.map_gen_settings'
 local map_scale = _DEBUG and 0.1 or 20
 local pic = require 'map_gen.data.presets.antarctica'
 --local pic = require 'map_gen.data.presets.antarctica_earth'
+pic = b.decompress(pic)
 
 local shape = b.picture(pic)
 shape = b.scale(shape, map_scale, map_scale)
